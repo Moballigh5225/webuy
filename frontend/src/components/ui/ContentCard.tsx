@@ -30,7 +30,7 @@ const ContentCard: React.FC<ProductsProps> = ({ products }) => {
   return (
     <div className="content-card-wrapper flex flex-col items-center gap-4 p-4">
       {/* Added flexbox and padding */}
-      <Card className="w-60 shadow-lg rounded-lg overflow-hidden">
+      <Card className="w-60 shadow-lg rounded-lg overflow-hidden bg-yellow-100">
         {/* Updated card with shadow and rounded corners */}
         <CardHeader shadow={false} floated={false} className="h-auto">
           <img
