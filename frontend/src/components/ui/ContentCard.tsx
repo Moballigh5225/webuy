@@ -48,7 +48,7 @@ const ContentCard: React.FC<ProductsProps> = ({ products }) => {
           </div>
           <div>
             <Typography color="blue-gray" className="font-medium">
-              $95.00
+              ${products.price}
             </Typography>
           </div>
           <Typography
