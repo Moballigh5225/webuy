@@ -15,9 +15,9 @@ const Content: React.FC = () => {
 
   // Sorting Function
   function sortProducts(items) {
-    if (orderValue === "desc") {
+    if (orderValue === "asc") {
       return items.sort((a, b) => a.price - b.price);
-    } else if (orderValue === "asc") {
+    } else if (orderValue === "desc") {
       return items.sort((a, b) => b.price - a.price);
     } else if (orderValue === "rec") {
       return items;
@@ -40,7 +40,7 @@ const Content: React.FC = () => {
   const sortedData = sortProducts(filteredData);
 
   return (
-    <div className="content-wrapper flex flex-wrap justify-center gap-8 p-8 h-full">
+    <div className="content-wrapper flex flex-wrap justify-center gap-8  h-full">
       {/* Mapping the filtered Data */}
       {sortedData.map((product) => (
         <ContentCard key={product.id} products={product} />

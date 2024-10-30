@@ -13,17 +13,16 @@ interface Data {
 const products: Data[] = [
   {
     id: "1",
-    title:
-      "HP MFP 1188W Multi-function WiFi Monochrome Laser Printer with Voice Activated Printing Google Assistant  (Toner Cartridge, 1 Ink Bottle Included)",
+    title: "HP MFP Monochrome Laser Printer",
     description:
-      "You can conveniently produce high-quality prints for various purposes with the HP Laser MFP 1188w Printer. It offers excellent speeds and performance, delivering high-quality results. And, this printer offers exceptional performance, consistently maintaining high-quality laser printing throughout every page. Furthermore, this printer enables you to produce professional-grade documents that exhibit sharp text, rich blacks, and visually captivating graphics.",
+      "You can conveniently produce high-quality prints for various purposes with the HP Laser MFP 1188w Printer. ",
     price: 18299,
     category: "electronics",
     brand: "hp",
     imageUrl:
       "https://media.croma.com/image/upload/v1685519657/Croma%20Assets/Computers%20Peripherals/Printers%20and%20Scanners/Images/272769_3_brkpfg.png",
-    stock: 10,
-    rating: 4.5,
+    stock: 0,
+    rating: 4,
   },
   {
     id: "2",
@@ -70,14 +69,14 @@ const products: Data[] = [
     title:
       "Acer Aspire 3 Backlit Intel Core i5 12th Gen 1235U - (16 GB/512 GB SSD/Windows 11 Home) A324-51 Thin and Light Laptop  (14 Inch, Steel Gray, 1.45 Kg)",
     description:
-      "Equipped with an Intel Core processor and DDR4 system memory, this laptop delivers lightning-fast performance for seamless multitasking, smooth streaming, and responsive computing. From everyday tasks to demanding applications, experience unmatched speed and efficiency",
+      "Equipped with an Intel Core processor and DDR4 system memory, this laptop delivers lightning-fast performance",
     price: 34990,
     category: "electronics",
     brand: "acer",
     imageUrl:
       "https://i5.walmartimages.com/asr/043ea3fa-d8bd-4ed3-b2cd-b70e97658b81.0488b42169dcf55a4fc1398392d97726.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF",
     stock: 20,
-    rating: 4.5,
+    rating: 2,
   },
   {
     id: "6",
@@ -90,7 +89,7 @@ const products: Data[] = [
     imageUrl:
       "https://img3.junaroad.com/uiproducts/20686377/pri_175_p-1703319641.jpg",
     stock: 6,
-    rating: 3.5,
+    rating: 3,
   },
   {
     id: "7",
@@ -103,7 +102,7 @@ const products: Data[] = [
     brand: "bestor",
     imageUrl: "https://m.media-amazon.com/images/I/610Qg0O-LuL.jpg",
     stock: 22,
-    rating: 3.5,
+    rating: 5,
   },
   {
     id: "8",
@@ -117,7 +116,7 @@ const products: Data[] = [
     imageUrl:
       "https://rukminim2.flixcart.com/image/850/1000/xif0q/bed-mattress/6/q/e/normal-top-single-08-36-75-allure-ortho-luxury-gel-infused-original-imah4gqjvc4m63k5.jpeg?q=90&crop=false",
     stock: 18,
-    rating: 5,
+    rating: 2,
   },
   {
     id: "9",
@@ -131,7 +130,7 @@ const products: Data[] = [
     imageUrl:
       "https://rukminim2.flixcart.com/image/850/1000/xif0q/bed-mattress/6/q/e/normal-top-single-08-36-75-allure-ortho-luxury-gel-infused-original-imah4gqjvc4m63k5.jpeg?q=90&crop=false",
     stock: 18,
-    rating: 5,
+    rating: 2,
   },
 ];
 

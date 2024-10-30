@@ -1,0 +1,103 @@
+body {
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 769px) {
+  .about-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-us {
+    width: 100vw;
+    text-align: center;
+    height: 30vh;
+  }
+
+  .about-us h1 {
+    font-size: 7vw;
+    padding-top: 5vh;
+  }
+
+  .about-us-text {
+    background-color: #08707f;
+    height: 20vh;
+    width: 100vw;
+    text-align: center;
+    color: #f7e7ce;
+    margin-top: -1vh; /* Ensure this doesn't conflict with layout */
+    padding: 2vh 20vw; /* Simplified padding */
+    position: relative;
+  }
+
+  .about-us-text p {
+    font-size: max(1.3vw, 100%);
+  }
+
+  .yipstats {
+    border: hidden;
+    text-align: center;
+    width: 100vw;
+    height: 60vh;
+    background-color: transparent; /* Use 'transparent' instead of 'none' */
+  }
+
+  .yipnav {
+    background-color: #f2f2f2;
+    border: hidden;
+  }
+
+  #yip-button1,
+  #yip-button2,
+  #yip-button3 {
+    border: hidden;
+    background-color: lightblue;
+    border-radius: 20px;
+    margin: 1em;
+  }
+
+  .text-success {
+    font-weight: 800;
+  }
+
+  .text-success p {
+    background-color: lightblue;
+    color: #08707f;
+    margin: auto;
+  }
+
+  .yipstats-heading {
+    font-size: min(2rem, 8vw);
+    font-weight: 800;
+    padding: 1.2rem 0;
+    color: #08707f;
+  }
+
+  .yipitems {
+    display: grid;
+    grid-template-columns: repeat(3, 18vw);
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .h1-seo {
+    font-size: min(4vw, 3rem);
+    color: #04333b;
+  }
+
+  .yipcardbody {
+    padding-top: 3vw;
+  }
+
+  .tab-space {
+    background-color: transparent; /* Use 'transparent' instead of 'none' */
+  }
+
+  .count-title {
+    font-size: max(1.3vw, 1rem);
+  }
+}

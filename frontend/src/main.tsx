@@ -6,7 +6,7 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import About from "./components/About.tsx";
+import About from "./pages/AboutScreen.tsx";
 import "./index.css";
 import ErrorPage from "./ErrorPage.tsx";
 import ProductDetailsScreen from "./pages/ProductDetailsScreen.tsx";
@@ -21,15 +21,12 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />} errorElement={<ErrorPage />}>
       <Route path="" element={<HomeScreen />} />
-      <Route
-        path="/about"
-        element={<About title="About" description="This is the about page" />}
-      />
+      <Route path="/about" element={<About />} />
       <Route path="/contact" element={<ContactScreen />} />
       <Route path="/signup" element={<SignupScreen />} />
 
       <Route path="/product/:id" element={<ProductDetailsScreen />} />
-      <Route path="/cart" element={<CartScreen />} />
+      <Route path="/cart/:id" element={<CartScreen />} />
     </Route>
   )
 );
