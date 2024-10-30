@@ -42,7 +42,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="cartlogo-wrapper text-white flex items-center space-x-4">
-        <NavLink to="/cart/:id">
+        <NavLink to="/cart">
           <ShoppingCartIcon className="h-6 w-6" />
         </NavLink>
         <NavLink

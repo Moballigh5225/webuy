@@ -1,23 +1,53 @@
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { useRecoilValue } from "recoil";
-import { productsStateAtom } from "../atom";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { cartStateAtom, productsStateAtom } from "../atom";
 import { IconButton, Rating } from "@material-tailwind/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowRightArrowLeft,
-  faHeart,
-  faTruckFast,
-} from "@fortawesome/free-solid-svg-icons";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { ChangeEvent, useState } from "react";
 
 const ProductDetailsScreen = () => {
+  const [quantity, setQuantity] = useState(1);
+  const [cartItems, setCartItems] = useRecoilState(cartStateAtom);
   const navigate = useNavigate();
   const { id } = useParams();
   const products = useRecoilValue(productsStateAtom);
   const filteredProduct = products.filter((item) => item.id === id);
 
-  const handleBuyNow = (id: string) => {
-    navigate(`/cart/${id}`);
+  // on-change fn for Quantity
+  const handleQuantity = (e) => {
+    const value = e.target.value;
+    setQuantity(value === "" ? 1 : Math.max(Number(value), 1));
+  };
+
+  // cartItem Data
+  const newCartItem =
+    filteredProduct.length > 0
+      ? {
+          id: filteredProduct[0].id,
+          title: filteredProduct[0].title,
+          price: filteredProduct[0].price,
+          imageUrl: filteredProduct[0].imageUrl,
+          quantity: quantity,
+        }
+      : null;
+
+  const existingItem = (id) => {
+    return cartItems.some((item) => item.id === id);
+  };
+
+  const handleBuyNow = (id) => {
+    if (!newCartItem) return;
+    if (existingItem(id)) {
+      const updatedCartItem = cartItems.map((item) =>
+        item.id === id ? { ...item, quantity: item.quantity + quantity } : item
+      );
+      setCartItems(updatedCartItem);
+    } else {
+      setCartItems((prevItems) => [...prevItems, newCartItem]);
+    }
+    navigate(`/cart`);
   };
   return (
     <div>
@@ -38,10 +68,7 @@ const ProductDetailsScreen = () => {
           <div className="flex flex-col flex-1 p-4 lg:p-12 rounded-lg text-black items-start justify-between">
             {/* Content Section */}
             <div className="flex-grow">
-              {/* Allow content to grow and push button section down */}
               <h2 className="text-xl lg:text-2xl font-medium text-left mb-2">
-                {" "}
-                {/* Responsive font size */}
                 {product.title}
               </h2>
               <div className="flex items-center gap-2 text-sm font-light mb-2">
@@ -101,6 +128,7 @@ const ProductDetailsScreen = () => {
                 <button
                   className="rounded-md rounded-r-none border border-r-0 border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-red-300 hover:border-slate-800 focus:border-slate-800 active:border-slate-800 active:text-black active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                   type="button"
+                  onClick={() => setQuantity((prev) => Math.max(prev - 1, 1))}
                 >
                   -
                 </button>
@@ -108,8 +136,11 @@ const ProductDetailsScreen = () => {
                   className="rounded-md rounded-r-none rounded-l-none border border-slate-300 py-2 px-4 w-16 text-center text-sm transition-all shadow-sm text-black focus:outline-none active:text-black active:bg-slate-800"
                   type="number"
                   placeholder="00"
+                  onChange={handleQuantity}
+                  value={quantity}
                 />
                 <button
+                  onClick={() => setQuantity((prev) => prev + 1)}
                   className="rounded-md rounded-l-none border border-l-0 border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-red-300 hover:border-slate-800 focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-black active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                   type="button"
                 >

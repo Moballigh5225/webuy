@@ -1,21 +1,21 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useRecoilValue } from "recoil";
+import { cartStateAtom } from "../atom";
 
-const CartScreen = () => {
-  const { id } = useParams(); // Get the id from URL params
-  const navigate = useNavigate();
+const CartScreen: React.FC = () => {
+  const cartItems = useRecoilValue(cartStateAtom);
 
-  const handleBackButton = () => {
-    navigate(-1); // Navigate back one step in history
-  };
-
+  console.log(cartItems, "cartItems");
   return (
-    <div className="flex flex-col min-h-screen">
-      <div className="bg-black text-white p-4 flex max-w-lg mx-auto">
-        <button className="w-auto" onClick={handleBackButton}>
-          Back
-        </button>
+    <div className="container mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-4">Your Cart</h1>
+      <div className="flex flex-col md:flex-row justify-between">
+        <div className="bg-white shadow-md rounded-lg p-6 flex-1 mb-4 md:mr-4">
+          {/* Cart items will go here */}
+        </div>
+        <div className="bg-white shadow-md rounded-lg p-6 w-full md:w-1/3">
+          {/* Pricing and Checkout button will go here */}
+        </div>
       </div>
-      <h1>CartScreen {id}</h1> {/* Display the id if needed */}
     </div>
   );
 };

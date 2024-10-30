@@ -25,7 +25,7 @@ interface ProductsProps {
 const ContentCard: React.FC<ProductsProps> = ({ products }) => {
   const navigate = useNavigate();
   const handleNavigate = (id: ProductsProps) => {
-    navigate(`/product/${id}`);
+    navigate(`/productDetails/${id}`);
   };
   return (
     <div className="content-card-wrapper flex flex-col items-center gap-4 p-4">
