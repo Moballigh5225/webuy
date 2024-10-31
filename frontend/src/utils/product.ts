@@ -26,7 +26,7 @@ const products: Data[] = [
   },
   {
     id: "2",
-    title: "Fluo M Running Shoes For Men",
+    title: "Fluo M Running Shoes",
     description:
       "The Fluo M Running Shoes for Men offer breathable mesh uppers for enhanced comfort and ventilation. A cushioned sole provides excellent shock absorption, while the lightweight design boosts agility. Durable rubber outsoles ensure reliable traction for daily runs and activities.",
     price: 2018,
@@ -39,8 +39,7 @@ const products: Data[] = [
   },
   {
     id: "3",
-    title:
-      "Virth Fan Air Cooling Portable Charging Standing Fan Mini-Fan USB Rechargeable 3 Blade Table Fan USB Fan",
+    title: "Virth Fan Air Cooling ",
     description:
       "The Virth Fan Air Cooling Portable Charging Standing Fan is a compact, USB-rechargeable mini-fan designed for convenience and portability. With three powerful blades, it delivers efficient airflow, making it perfect for desktops, bedside tables, or travel. Its adjustable standing feature and long-lasting battery ensure you stay cool anywhere, anytime.",
     price: 1299,
@@ -66,8 +65,7 @@ const products: Data[] = [
   },
   {
     id: "5",
-    title:
-      "Acer Aspire 3 Backlit Intel Core i5 12th Gen 1235U - (16 GB/512 GB SSD/Windows 11 Home) A324-51 Thin and Light Laptop  (14 Inch, Steel Gray, 1.45 Kg)",
+    title: "Acer Aspire 3 ",
     description:
       "Equipped with an Intel Core processor and DDR4 system memory, this laptop delivers lightning-fast performance",
     price: 34990,
@@ -93,8 +91,7 @@ const products: Data[] = [
   },
   {
     id: "7",
-    title:
-      "Bestor C Multiport Adapter for MacBook Pro Air 2021 2020 31C 4-in-1 4Port USB Hub",
+    title: "Bestor C Multiport Adapter ",
     description:
       "BESTOR 4 PORT USB-C HUB Dual play mirror modes boost your efficiency 2 times. No driver or software is required, and the extra 4 USB ports can be used quickly. You can always connect to your computer and other devices to avoid frequent use of the Type-C interface that comes with your computer. The top charging port gives you easy access for fast, temporary connections of USB sticks, media readers, small accessories such as USB lights and fans and more. Connect a modem, USB printer, scanner and HD to a convenient USB hub. The 4-port hub supports cascading installation with other USB 3.1 hubs, multiple USB 3.1 device ports - a scalable solution for connecting multiple USB devices.",
     price: 356,
@@ -106,8 +103,7 @@ const products: Data[] = [
   },
   {
     id: "8",
-    title:
-      "Hypnos Allure Ortho Luxury Gel-Infused Memory Foam 08 inch Single Pocket Spring Mattres",
+    title: "Allure Ortho Luxury Gel-Infused ",
     description:
       "The Hypnos Allure mattress is designed in such a way that it can be used from both the sides and gives the same comfort as new.Upgrade to fresh, new mornings with a world class pocketed spring mattress that is as easy on your wallet as it is on your back This durable mattress with stands years of use.It's Provides back pain relief by eliminating undue stress on spine and back.Allure mattress are often recommended for orthopedic patients with hip and shoulder problems.",
     price: 5584,
@@ -120,8 +116,7 @@ const products: Data[] = [
   },
   {
     id: "9",
-    title:
-      "Hypnos Allure Ortho Luxury Gel-Infused Memory Foam 08 inch Single Pocket Spring Mattres",
+    title: "Ortho Luxury Gel-Infused ",
     description:
       "The Hypnos Allure mattress is designed in such a way that it can be used from both the sides and gives the same comfort as new.Upgrade to fresh, new mornings with a world class pocketed spring mattress that is as easy on your wallet as it is on your back This durable mattress with stands years of use.It's Provides back pain relief by eliminating undue stress on spine and back.Allure mattress are often recommended for orthopedic patients with hip and shoulder problems.",
     price: 5584,
